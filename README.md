@@ -74,24 +74,26 @@ Optimized using preprocessing and feature extraction
 Evaluated using classification metrics
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the repository
 git clone https://github.com/kethabhargavi/crops-disease-project.git
 cd crops-disease-project
+
 2️⃣ Install dependencies
 pip install -r requirements.txt
+
 3️⃣ Run the application
 python app.py
 
 Open in browser:
 
 http://localhost:5000
+
 📸 Sample Output
+<img src="images/homepage.png" width="350">
+<img src="images/prediction1.png" width="350">
 
-<img src="images/homepage.jpg" width="350">
-<img src="images/prediction1.jpg" width="350">
-<img src="images/prediction2.jpg" width="350">
 🔍 How It Works
-
 User uploads a leaf image.
 
 Image is resized and normalized.
