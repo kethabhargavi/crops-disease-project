@@ -94,11 +94,11 @@ http://localhost:5000
 **🔍 How It Works**
 
 
-    User uploads a leaf image.
-   Image is resized and normalized.
-   Features are extracted.
-   Trained ML model predicts disease class.
-   Result is displayed to the user.
+     User uploads a leaf image.
+     Image is resized and normalized.
+     Features are extracted.
+     Trained ML model predicts disease class.
+     Result is displayed to the user.
 
 **💡 Future Improvements**
 
