@@ -11,16 +11,13 @@ The application allows users to upload a leaf image and instantly receive a pred
 
 
 **✨ Key Features**
+
+
     Leaf image upload via web interface
-    
     Image preprocessing (resizing, normalization)
-
     Feature extraction and classification
-
     85%+ model accuracy
-
     Real-time prediction results
-
     Modular and scalable architecture
 
 **Deployment-ready structure**
@@ -95,6 +92,7 @@ http://localhost:5000
 <img src="images/prediction1.png" width="450">
 
 **🔍 How It Works**
+
 
     User uploads a leaf image.
    Image is resized and normalized.
