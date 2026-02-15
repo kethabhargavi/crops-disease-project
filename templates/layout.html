@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BIOSCAN{% endblock %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- JS (DEFER IS IMPORTANT) -->
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <span class="menu-icon" id="menuBtn">☰</span>
+    <span class="app-title">BIOSCAN</span>
+    <a href="/logout" class="logout-btn">Logout</a>
+</div>
+
+<!-- SIDE NAV -->
+<div id="sidenav" class="sidenav">
+    <a href="/home">Home</a>
+    <a href="/detection">Detection</a>
+    <a href="/tips">Cultivation Tips</a>
+   
+    <a href="/contact">Contact</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Contact Us | BIOSCAN{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>📞 Contact Us</h2>
+    <p>Have questions or suggestions? Reach out to us.</p>
+</div>
+
+<div class="contact-container">
+    <form method="POST" action="/contact">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+{% endblock %}

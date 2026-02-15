@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="menu-btn" onclick="openNav()">☰</div>
+
+<div id="sidenav" class="sidenav">
+     <a href="/home">🏠 Home</a>
+        <a href="/profile">👤 Profile</a>
+        <a href="/detection">🌿 Detection</a>
+        <a href="/tips">🌱 Cultivation Tips</a>
+        <a href="/contact">📞 Contact</a>
+        <a href="/logout">🚪 Logout</a>
+</div>
+
+<div class="content">
+    <h2>👤 User Profile</h2>
+
+    <div class="profile-card">
+        <img src="{{ url_for('static', filename='user.png') }}" class="profile-img">
+        <h3>{{ user }}</h3>
+        <p><b>Email:</b> demo@gmail.com</p>
+        <p><b>Role:</b> Farmer</p>
+        <p><b>Location:</b> Andhra Pradesh</p>
+
+        <button>Edit Profile</button>
+    </div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("sidenav").style.width = "220px";
+}
+</script>
+
+</body>
+</html>

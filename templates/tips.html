@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block title %}Cultivation Tips | BIOSCAN{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>🌱 Cultivation Tips</h2>
+    <p>Improve crop health and yield with these practical tips.</p>
+</div>
+
+    
+<div class="tips-grid">
+
+    <div class="tip-card">
+        <a href="https://farmonaut.com/blogs/soil-preparation-secrets-boost-yields-with-7-hacks" target="_blank">
+            <img src="{{ url_for('static', filename='soilpreparation.jpg') }}">
+        </a>
+        <h3>Soil Preparation</h3>
+        <p>Test soil quality before planting. Add organic compost for better nutrients.</p>
+    </div>
+
+    <div class="tip-card">
+        <a href="https://agribegri.com/blog/best-irrigation-methods-in-agriculture?srsltid=AfmBOoqvLOZQSRnBjXgssjzAKhTnu30f-d7H4oHl--373tj5AperIhOD" target="_blank">
+            <img src="{{ url_for('static', filename='irrigation.jpg') }}">
+        </a>
+        <h3>Proper Irrigation</h3>
+        <p>Water crops early morning or evening to reduce evaporation loss.</p>
+    </div>
+
+    <div class="tip-card">
+        <a href="https://en.wikipedia.org/wiki/Fertilizer" target="_blank">
+            <img src="{{ url_for('static', filename='fertilizerusage.jpg') }}">
+        </a>
+        <h3>Fertilizer Usage</h3>
+        <p>Use balanced NPK fertilizers based on crop growth stage.</p>
+    </div>
+
+    <div class="tip-card">
+        <a href="https://en.wikipedia.org/wiki/Pest_control" target="_blank">
+            <img src="{{ url_for('static', filename='pestcontrol.jpg') }}">
+        </a>
+        <h3>Pest Control</h3>
+        <p>Use neem oil or organic pesticides to control pests naturally.</p>
+    </div>
+
+    <div class="tip-card">
+        <a href="https://en.wikipedia.org/wiki/Crop_rotation" target="_blank">
+            <img src="{{ url_for('static', filename='rotation.jpg') }}">
+        </a>
+        <h3>Crop Rotation</h3>
+        <p>Rotate crops every season to maintain soil fertility.</p>
+    </div>
+
+    <div class="tip-card">
+        <a href="https://en.wikipedia.org/wiki/Harvest" target="_blank">
+            <img src="{{ url_for('static', filename='harvesting.jpg') }}">
+        </a>
+        <h3>Harvesting</h3>
+        <p>Harvest crops at the right maturity stage for best yield.</p>
+    </div>
+</div>
+
+{% endblock %}

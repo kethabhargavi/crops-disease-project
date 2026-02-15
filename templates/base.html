@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}BIOSCAN{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+
+<!-- MENU BUTTON -->
+<span class="menu-btn" onclick="openNav()">☰</span>
+
+<!-- SIDE NAV -->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" onclick="closeNav()">✖ Close</a>
+    <a href="/home">🏠 Home</a>
+    <a href="/detection">🦠 Detection</a>
+ 
+    <a href="/contact">📞 Contact Us</a>
+    <a href="/logout">🚪 Logout</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

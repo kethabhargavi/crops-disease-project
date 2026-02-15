@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}Home | BIOSCAN{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1 class="hero-title">BIOSCAN</h1>
+    <p class="hero-subtitle">
+        AI-Powered Crop Disease Detection & Smart Farming Assistance
+    </p>
+
+    <div class="hero-actions">
+        <a href="/detection" class="btn-hero">Start Detection</a>
+        <a href="/tips" class="btn-hero secondary">View Crop Tips</a>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="content">
+    <h2 style="text-align:center; margin-bottom:20px;">Why Choose BIOSCAN?</h2>
+
+    <div class="tips-grid">
+        <div class="tip-card">
+            <img src="{{ url_for('static', filename='ai.jpg') }}" alt="AI Accuracy">
+            <h3>AI Accuracy</h3>
+            <p>
+                Advanced deep-learning models analyze crop images to identify
+                diseases with high precision.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <img src="{{ url_for('static', filename='upload.jpg') }}" alt="Easy Upload">
+            <h3>Easy Image Upload</h3>
+            <p>
+                Upload crop leaf images directly from your device and get
+                instant disease insights.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <img src="{{ url_for('static', filename='report.jpg') }}" alt="Actionable Reports">
+            <h3>Actionable Reports</h3>
+            <p>
+                Receive symptoms, causes, and preventive measures in a
+                farmer-friendly format for quick action.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

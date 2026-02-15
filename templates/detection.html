@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block title %}Detection | BIOSCAN{% endblock %}
+
+{% block content %}
+<div class="detection-container">
+    <h2>Crop Disease Detection</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        <h3 class="success">Disease: {{ result.disease }}</h3>
+
+        <img src="/{{ result.image }}">
+
+        <h4>Symptoms</h4>
+        <ul>
+            {% for s in result.symptoms %}
+                <li>{{ s }}</li>
+            {% endfor %}
+        </ul>
+
+        <h4>Precautions</h4>
+        <ul>
+            {% for p in result.precautions %}
+                <li>{{ p }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
