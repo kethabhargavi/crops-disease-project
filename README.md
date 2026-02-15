@@ -97,26 +97,19 @@ http://localhost:5000
 **🔍 How It Works**
 
     User uploads a leaf image.
-
    Image is resized and normalized.
-
    Features are extracted.
-
    Trained ML model predicts disease class.
-
    Result is displayed to the user.
 
 **💡 Future Improvements**
 
-Improve accuracy using CNN / Deep Learning
+     Improve accuracy using CNN / Deep Learning
+     Add real-time camera detection
+     Deploy with Docker
+     Build mobile application version
+     Add multi-language support for farmers
 
-Add real-time camera detection
-
-Deploy with Docker
-
-Build mobile application version
-
-Add multi-language support for farmers
 
 **👩‍💻 Author**
 
