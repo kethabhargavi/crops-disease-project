@@ -6,9 +6,6 @@ import os
 app = Flask(__name__)
 app.secret_key = "bioscan_secret"
 
-port = int(os.environ.get("PORT", 10000))
-app.run(host="0.0.0.0", port=port)
-
 # ---------------- USERS (TEMP STORAGE) ----------------
 users = {}
 
@@ -20,6 +17,7 @@ def login_required(f):
             return redirect("/")
         return f(*args, **kwargs)
     return decorated
+
 
 # ---------------- AUTH ----------------
 @app.route("/", methods=["GET", "POST"])
@@ -53,6 +51,7 @@ def logout():
     session.pop("user", None)
     return redirect("/")
 
+
 # ---------------- MAIN PAGES ----------------
 @app.route("/home")
 @login_required
@@ -71,6 +70,7 @@ def tips():
 def contact():
     return render_template("contact.html")
 
+
 # ---------------- DETECTION ----------------
 @app.route("/detection", methods=["GET", "POST"])
 @login_required
@@ -82,14 +82,16 @@ def detection():
 
         if image and image.filename != "":
             filename = secure_filename(image.filename)
-            upload_dir = "static/uploads"
+
+            upload_dir = os.path.join("static", "uploads")
             os.makedirs(upload_dir, exist_ok=True)
 
             image_path = os.path.join(upload_dir, filename)
             image.save(image_path)
 
-            # TEMP AI OUTPUT (replace with CNN later)
+            # TEMP AI OUTPUT (Replace with real CNN model later)
             disease = "Leaf Blight"
+
             disease_data = {
                 "Leaf Blight": {
                     "symptoms": [
@@ -115,3 +117,6 @@ def detection():
     return render_template("detection.html", result=result)
 
 
+# ---------------- IMPORTANT FOR LOCAL RUN ----------------
+if __name__ == "__main__":
+    app.run(debug=True)
