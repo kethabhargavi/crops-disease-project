@@ -1,8 +1,9 @@
-opencv-python
-numpy
-scikit-learn
-matplotlib
-seaborn
 flask
 gunicorn
 werkzeug
+opencv-python
+numpy
+scikit-learn==1.7.2
+matplotlib
+seaborn
+pytest
